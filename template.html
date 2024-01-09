@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Let's Make the Difference!</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+	<link rel="stylesheet" href="styles.css" />
+
+
+</head>
+
+<body>
+	<main class="container">
+		<header>
+			<h3 id="header">Your gift makes the difference</h3>
+		</header>
+		<div class="container">
+			<form id="myGift" class="row g-3" onsubmit="updateUrlOnSubmit(event); return false;" novalidate>
+				<section class="col-md-3">
+					<label for="giftAmount" class="form-label">Select a gift amount</label>
+					<div class="input-group">
+						<input type="button" class="form-control myButton" name="giftAmount" value="$25" id="a"
+							onclick="selectedAmount('a')" />
+						<input type="button" class=" form-control myButton " name="giftAmount" value="$50" id="b"
+							onclick="selectedAmount('b')" />
+						<input type="button" class="form-control myButton " name="giftAmount" value="$100" id="c"
+							onclick="selectedAmount('c')" />
+					</div>
+				</section>
+				<section class="col-md-3">
+					<label for="enterAmount" class="form-label">Or Enter a gift amount</label>
+					<div class="input-group has-validation">
+						<span class="input-group-text" id="inputGroupPrepend">$</span>
+						<input type="number" class="form-control myAmount" id="amount" name="enterAmount"
+							placeholder="Enter gift amount" min="5" max="10000" pattern="[0-9]{5}"
+							onchange="validateCurrency()" />
+					</div>
+				</section>
+				<section class="col-md-3">
+					<label for="frequency" class="form-label">Gift frequency</label>
+					<div class="input-group">
+						<input type="button" class="form-control myButton" name="frequency" value="One Time" id="o"
+							onclick="selectedFrequency('o')" />
+						<input type="button" class="form-control myButton" name="frequency" value="Monthly" id="m"
+							onclick="selectedFrequency('m')" />
+					</div>
+				</section>
+				<div class="col-md-3 ">
+					<button type="submit" class="form-control button-margin" id="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</main>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="scriptFile.js" type="text/JavaScript">
+	</script>
+</body>
+
+</html>
